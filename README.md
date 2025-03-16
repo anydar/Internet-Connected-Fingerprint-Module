@@ -72,6 +72,5 @@ This project successfully implements a fingerprint recognition system using ESP3
 [4] Juby & Gladstone, "Leaf identification using FLANN matcher."
 [5] FPM Library Documentation.
 
----
 
-This README provides an overview of the project, including its implementation, methodology, and results. It serves as a guide for setting up and understanding the fingerprint recognition system.
+
