@@ -54,6 +54,10 @@ Unlike previous works, this project implements server-based fingerprint verifica
 - **Performance Comparison**:
   - FLANN-based matcher provided higher accuracy compared to ORB.
   - ORB was faster but produced more false positives.
+ 
+    ![circuit connection](https://github.com/user-attachments/assets/fd4ab399-01a2-4779-b08b-efe062c59647)
+![fingerprint variations](https://github.com/user-attachments/assets/e490bc41-dd03-4c7a-9de8-ca033a32bc86)
+
 
 Testing results demonstrated consistent fingerprint matching with a best match score greater than 1, setting a verification threshold to minimize false positives.
 
