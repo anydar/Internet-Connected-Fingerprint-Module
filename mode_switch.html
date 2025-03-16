@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biometric Access Control System</title>
+  <style>
+    /* General styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #000000, #000000);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Project name */
+    .project-name {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #FFD700, #FFFFFF);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* Main heading */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Buttons */
+    button {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #0056b3, #001f7f);
+      transform: scale(1.1);
+    }
+
+    button:active {
+      background: linear-gradient(to right, #00274d, #000d33);
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Dynamic effects for alerting */
+    .info-text {
+      font-size: 1rem;
+      margin-top: 20px;
+      animation: fadeIn 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0.6;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Project name -->
+  <div class="project-name">Biometric Access Control System</div>
+
+  <!-- Main title -->
+  <h1>Server Mode Switcher</h1>
+
+  <!-- Buttons -->
+  <button onclick="changeMode('enroll')">Enroll</button>
+  <button onclick="changeMode('verify')">Verify</button>
+
+  <!-- Informational text -->
+  <div class="info-text">Click a button to set the server mode.</div>
+
+  <!-- Footer -->
+  <div class="footer">© 2024 Biometric Access Control System</div>
+
+  <script>
+    function changeMode(mode) {
+      fetch('http://localhost:8000/set_mode', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ mode: mode })
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert(data);
+      })
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>
