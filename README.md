@@ -1,5 +1,8 @@
 # Fingerprint Recognition System
 
+## Contributors to this work:
+[Ashish Rodi](https://www.linkedin.com/in/ashish-rodi-a7328a269/), [Samarth Arole](https://www.linkedin.com/in/samarth-arole-704748262/), [Aryan Mundra](https://www.linkedin.com/in/aryan-mundra-512b64218/)
+
 ## Abstract
 This project presents a fingerprint recognition system using an ESP32 microcontroller, an R307 fingerprint sensor, and a local server for data storage and verification. The system is designed for biometric authentication and enrollment, providing secure and efficient fingerprint data handling. It leverages TCP communication over Wi-Fi, enabling real-time data exchange between the ESP32 and a remote server. The project allows for switching between two operational modes: enrolling new fingerprints and verifying existing fingerprints. This report outlines the design, implementation, and functionality of the system, focusing on hardware-software integration and TCP-based data transfer.
 
